@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { colors } from './src/theme/color'
 import { spacing } from './src/theme/spacing'
 import { useFonts } from 'expo-font'
 import { typography } from './src/theme/typography'
+import Text from './src/components/data/text/text'
 export default function App() {
     const [loaded] = useFonts({
         'Antonio-Medium': require('./assets/fonts/Antonio-Medium.ttf'),
