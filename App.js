@@ -4,7 +4,7 @@ import { colors } from './src/theme/color'
 import { spacing } from './src/theme/spacing'
 import { useFonts } from 'expo-font'
 import { typography } from './src/theme/typography'
-import Text from './src/components/data/text/text'
+import Text from './src/components/text/text'
 export default function App() {
     const [loaded] = useFonts({
         'Antonio-Medium': require('./assets/fonts/Antonio-Medium.ttf'),
@@ -18,9 +18,7 @@ export default function App() {
     }
     return (
         <View style={styles.container}>
-            <Text style={{
-                fontFamily:typography.bold
-            }}>Open up App.js to start working on your app!</Text>
+            <Text preset="h2" style={{color:"red"}}>Open up App.js to start working on your app!</Text>
             <Text style={{
                 marginTop: spacing[2],
                 fontFamily:"LeagueSpartan-Regular"
@@ -33,7 +31,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.green,
+        backgroundColor: colors.black,
         alignItems: 'center',
         justifyContent: 'center',
     },
